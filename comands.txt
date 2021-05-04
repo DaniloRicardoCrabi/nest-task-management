@@ -1,0 +1,14 @@
+>nest g controller tasks --no-spec
+yarn start:dev
+nest g module tasks
+nest g service tasks --no-spec
+nest g controller tasks --no-spec
+yarn add class-validator class-transformer   
+yarn add bcrypt
+
+import { v1 as uuid} from 'uuid';
+
+entities: [__dirname + '/../**/*.entity.{js,ts}']
+autoLoadEntities: true
+
+
