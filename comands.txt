@@ -5,6 +5,7 @@ nest g service tasks --no-spec
 nest g controller tasks --no-spec
 yarn add class-validator class-transformer   
 yarn add bcrypt
+yarn add @nestjs/typeorm typeorm pg
 
 import { v1 as uuid} from 'uuid';
 

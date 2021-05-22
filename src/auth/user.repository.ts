@@ -9,7 +9,7 @@ export class UserRepository extends Repository<User> {
 
   async signUp(authCredentialsDto: AuthCredentialsDto): Promise<void> {
     const { username, password } = authCredentialsDto;
-
+    console.log("Username:" + username +" , password: " + password);
 
     const user = new User();
     user.username = username;
@@ -19,6 +19,7 @@ export class UserRepository extends Repository<User> {
     try {
       await user.save();
     } catch (error) {
+      console.log(error);
       if (error.code === '23505') {
         throw new ConflictException("User already signup")
       }
